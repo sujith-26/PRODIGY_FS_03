@@ -1,0 +1,14 @@
+{
+  "name": "ecommerce-website",
+  "version": "1.0.0",
+  "description": "E-commerce website for a local store",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.19.2",
+    "mongoose": "^7.4.0"
+  }
+}

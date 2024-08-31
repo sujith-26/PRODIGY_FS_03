@@ -1,0 +1,203 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font family */
+    background-color: #C4DFE6; /* Seafoam Green */
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #66A5AD; /* Light Blue */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #fff; /* White */
+    font-size: 18px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li a:hover {
+    color: #C4DFE6; /* Seafoam Green */
+}
+
+.navbar ul li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    bottom: -2px;
+    left: 0;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul li.active a::after,
+.navbar ul li a:hover::after {
+    background-color: #C4DFE6; /* Seafoam Green */
+}
+
+/* Improved Form Styles */
+form {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form textarea {
+    width: 97%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: #fafafa;
+    color: #333;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    background-color: #fff;
+    border-color: #66A5AD; /* Light Blue */
+}
+
+form button[type="submit"] {
+    background-color: #66A5AD; /* Light Blue */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #4b8a8c; /* Slightly darker Light Blue */
+    margin-right: 100px;
+}
+
+/* Product List Styles */
+#product-list {
+    display: flex;
+    flex-wrap: wrap; /* Allows the products to wrap onto the next line if there are too many to fit in one row */
+    justify-content: space-between; /* Distributes space between products */
+    margin: 20px auto; /* Centers the product list horizontally */
+    padding: 0 10px; /* Optional: Adds horizontal padding */
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    flex: 1 1 calc(25% - 20px); /* Adjusts to fit 4 products per row with some margin */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card img {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin: 15px 0 10px;
+    color: #333;
+    text-align: center; /* Centers the text */
+}
+
+.product-card p {
+    color: #666;
+    font-size: 16px;
+    text-align: center; /* Centers the text */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #66A5AD; /* Light Blue */
+    color: #fff; /* White */
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 992px) {
+    .product-card {
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    form {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .product-card {
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px);
+        margin: 15px;
+    }
+}
+
+h1, h2, h3 {
+    text-align: center;
+    color: #333; /* Ensure headings match the overall theme */
+}
